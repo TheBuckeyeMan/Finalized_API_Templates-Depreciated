@@ -28,4 +28,3 @@ public class AppConfig {
         return new ApiKeyInterceptor(apiKey);
     }
 }
-
