@@ -22,7 +22,7 @@ public class TemplateService implements Supplier<List<Model>>{
     private final ObjectMapper objectMapper = new ObjectMapper();//Add in object for the JSON Response Object
 
     public List<Model> get(){
-        String url = "<Your URL Here>";
+        String url = "https://api.api-ninjas.com/v1/facts";
 
         List<Model> model = null;
         try {
