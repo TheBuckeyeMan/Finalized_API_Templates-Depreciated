@@ -1,5 +1,6 @@
-#FROM amazon/aws-lambda-java:11 There is a special base container for aws lambda. Check if this is what is the problem. Update app to java 11 to use. 
-FROM openjdk:17-jdk
-ARG JAR_FILE=./target/template-0.0.1-SNAPSHOT.jar
-COPY target/template-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+FROM public.ecr.aws/lambda/java:17 AS base
+WORKDIR /src
+COPY <Your_Jar_File> /app/
+ENV LAMBDA_TASK_ROOT=/src
+ENV LAMBDA_HANDLER=<Package path to Lambda Handler>::<Lambda Handler Class Name>
+CMD ["<Package path to Lambda Handler>::<Lambda Handler Class Name>"]
