@@ -28,9 +28,4 @@ public class AppConfig {
     public ApiKeyInterceptor apiKeyInterceptor(){
         return new ApiKeyInterceptor(apiKey);
     }
-
-//     @Configuration
-//     @Import({ PetsController.class })
-//     public class PetStoreSpringAppConfig {
-// }
 }
